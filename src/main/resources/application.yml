@@ -11,9 +11,9 @@ spring:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     show-sql: true
   datasource:
-    url: jdbc:mysql://localhost:3307/blogentrydb?serverTimezone=Europe/Vienna
-    username: blogentryservice
-    password: "password123"
+    url: jdbc:${DB_CONN}://${DB_HOST}:${DB_PORT}/${DB_DATABASE}?serverTimezone=Europe/Vienna
+    username: ${DB_USER}
+    password: ${DB_PWD}
 
 zuul:
   ignored-services: "*"

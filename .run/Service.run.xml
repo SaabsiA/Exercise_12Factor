@@ -4,6 +4,14 @@
     <option name="SPRING_BOOT_MAIN_CLASS" value="fhtw.msc.swe.aigensberger.exercise_12factor.MainApp" />
     <option name="ALTERNATIVE_JRE_PATH" />
     <option name="SHORTEN_COMMAND_LINE" value="NONE" />
+    <envs>
+      <env name="DB_CONN" value="mysql" />
+      <env name="DB_PWD" value="password123" />
+      <env name="DB_HOST" value="localhost" />
+      <env name="DB_PORT" value="3307" />
+      <env name="DB_DATABASE" value="blogentrydb" />
+      <env name="DB_USER" value="blogentryservice" />
+    </envs>
     <method v="2">
       <option name="Make" enabled="true" />
     </method>
