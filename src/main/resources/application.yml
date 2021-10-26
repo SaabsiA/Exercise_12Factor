@@ -2,7 +2,22 @@ server:
   port: 8080
 
 spring:
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
   datasource:
     url: jdbc:mysql://localhost:3307/blogentrydb?serverTimezone=Europe/Vienna
     username: blogentryservice
     password: "password123"
+
+zuul:
+  ignored-services: "*"
+  prefix: /api
+  routes:
+    blogentryservice: /blog/**
+  retryable: true

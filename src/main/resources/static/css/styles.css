@@ -1,0 +1,42 @@
+h1 {
+    text-align: center;
+}
+
+h3 {
+    color: #25605e;
+}
+
+input {
+    margin-right: 1rem;
+}
+
+legend {
+    font-size: 1.25rem;
+}
+
+div#entries div {
+    text-align: center;
+    margin: 10px 0 20px 0;
+    padding: 0.5px 0 5px 0;
+    background-color: lightgray;
+    border-radius: 20px;
+}
+
+.entry {
+    cursor: pointer;
+}
+
+#text {
+    text-align: center;
+    margin: 25px 0 15px 0;
+}
+
+button {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}

@@ -1,10 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>12 Factor App Exercise</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <title>12 Factor App Exercise</title>
 
-</body>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div id="home" class="container">
+            <h1>Blog Entries</h1>
+
+            <button type="button" class="btn btn-primary" id="createBtn">Create a new Blog</button>
+
+            <div id="entries"></div>
+        </div>
+
+        <div id="detail" class="container" hidden>
+            <div id="detailBody"></div>
+            <button type="button" class="btn btn-primary homeBtn">Return to Homepage</button>
+        </div>
+
+        <div id="create" class="container" hidden>
+            <h1>Create a new Blog Entry</h1>
+
+            <button type="button" class="btn btn-primary homeBtn">Return to Homepage</button>
+
+            <form id="createBlogForm">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" class="form-control" id="title" name="title">
+                </div>
+                <div class="form-group">
+                    <label for="descr">Description</label>
+                    <textarea class="form-control" id="descr" name="text" rows="9"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="publicationDate">Publication Date</label>
+                    <input type="date" class="form-control" id="publicationDate" name="publicationDate">
+                </div>
+                <div class="form-group">
+                    <label for="author">Written by</label>
+                    <select class="form-control" id="author" name="author"></select>
+                </div>
+                <button type="button" id="createBlogBtn" class="btn btn-primary mb-2">Create</button>
+            </form>
+        </div>
+
+        <script type="text/javascript" src="js/getAll.js"></script>
+        <script type="text/javascript" src="js/getAuthors.js"></script>
+        <script type="text/javascript" src="js/showDetails.js"></script>
+        <script type="text/javascript" src="js/buttons.js"></script>
+    </body>
 </html>

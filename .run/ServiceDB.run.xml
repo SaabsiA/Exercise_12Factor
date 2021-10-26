@@ -2,13 +2,13 @@
   <configuration default="false" name="ServiceDB" type="docker-deploy" factoryName="docker-image" server-name="Docker">
     <deployment type="docker-image">
       <settings>
-        <option name="imageTag" value="mysql:latest" />
+        <option name="imageTag" value="mysql" />
         <option name="containerName" value="blog-service-db" />
         <option name="envVars">
           <list>
             <DockerEnvVarImpl>
               <option name="name" value="MYSQL_ROOT_PASSWORD" />
-              <option name="value" value="test" />
+              <option name="value" value="admin" />
             </DockerEnvVarImpl>
             <DockerEnvVarImpl>
               <option name="name" value="MYSQL_DATABASE" />
