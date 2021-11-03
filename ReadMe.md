@@ -1,5 +1,11 @@
 # 12 Factor Exercise
 
+## Github
+First Clone the Repository from Github:
+- [Link to Repo](https://github.com/SaabsiA/Exercise_12Factor)
+Or Clone with the following command:
+```gh repo clone SaabsiA/Exercise_12Factor```
+
 ## Docker
 For this service Docker with mysql was used. The complete configuration for the Docker Container was done via the Docker run-config in IntelliJ.
 The Docker Compose file must run, before the Service can be started. Environment Variables must be added, since the Docker File uses Variables 
