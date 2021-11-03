@@ -3,7 +3,7 @@ $(document).ready(function () {
         console.log(data);
 
         for (let i = 0; i < data.length; i++) {
-            let id = data[i].id;
+            let id = data[i].oid;
             let firstname = data[i].firstName;
             let lastname = data[i].lastName;
 

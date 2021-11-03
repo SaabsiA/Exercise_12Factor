@@ -1,6 +1,6 @@
 $(document).on("click", '.entry', function() {
     let entryId = $(this).attr('id');
-    let url = 'blogentires/' + entryId.toString();
+    let url = 'blogentries/' + entryId.toString();
 
     console.log('Retrieve BlogEntry data for id ' + entryId);
 
@@ -13,7 +13,7 @@ $(document).on("click", '.entry', function() {
     $.get(url, function(data) {
         console.log(data);
         let title = data.title;
-        let text = data.text;
+        let text = data.description;
         let date = data.publicationDate;
         let author = data.author;
 

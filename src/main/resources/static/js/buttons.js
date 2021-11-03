@@ -13,14 +13,13 @@ $(document).on('click','#createBtn',function () {
 $(document).on('click','#createBlogBtn',function () {
     let x = $('#createBlogForm').serializeArray();
     let blog = {};
-    let sights = [];
     $.each(x, function(i, field) {
         switch (field.name) {
             case 'title':
                 blog.title = field.value;
                 break;
-            case 'text':
-                blog.text = field.value;
+            case 'description':
+                blog.description = field.value;
                 break;
             case 'publicationDate':
                 let date = new Date(field.value);
@@ -28,14 +27,12 @@ $(document).on('click','#createBlogBtn',function () {
                 break;
             case 'author':
                 blog.author = {};
-                blog.author.id = field.value;
+                blog.author.oid = field.value;
                 break;
             default:
                 break;
         }
     });
-
-    blog.sights = sights;
 
     console.log(blog);
 

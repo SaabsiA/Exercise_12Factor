@@ -1,0 +1,13 @@
+version: "2"
+services:
+  database:
+    image: ${DB_CONN}
+    ports:
+      - "3307:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=${DB_ROOT_PWD}
+      - MYSQL_USER=${DB_USER}
+      - MYSQL_PASSWORD=${DB_PWD}
+      - MYSQL_DATABASE=${DB_DATABASE}
+  web:
+    image: nginx
